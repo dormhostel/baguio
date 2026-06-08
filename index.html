@@ -72,14 +72,9 @@ nav{
 .hero-grad{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.6) 35%, rgba(8,8,8,0.1) 70%),
-    linear-gradient(to right, rgba(8,8,8,0.5) 0%, transparent 60%);
+    linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.55) 38%, rgba(8,8,8,0.15) 75%);
 }
-.hero-content{
-  position:relative;z-index:2;
-  padding:0 60px 80px;
-  max-width:760px;
-}
+.hero-content{position:relative;z-index:2;padding:0 60px 80px;max-width:900px;}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:12px;
   font-family:var(--font-mono);font-size:0.65rem;
@@ -472,7 +467,6 @@ footer{
     <span>Stanford Residences · Baguio City</span>
   </div>
   <ul class="nav-links">
-    <li><a href="#rooftop">Rooftop</a></li>
     <li><a href="#tour">Unit Tour</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#rates">Rates</a></li>
@@ -503,7 +497,7 @@ footer{
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.23 2 11.5c0 2.83 1.27 5.37 3.3 7.12V22l3.03-1.66A11.13 11.13 0 0012 21c5.523 0 10-4.23 10-9.5S17.523 2 12 2zm1.14 12.79l-2.55-2.72-4.97 2.72 5.47-5.8 2.61 2.72 4.91-2.72-5.47 5.8z"/></svg>
         Book via Messenger
       </a>
-      <a href="#rooftop" class="btn-outline">View Rooftop ↓</a>
+      <a href="#tour" class="btn-outline">Explore the Unit ↓</a>
     </div>
   </div>
 </div>
@@ -514,21 +508,6 @@ footer{
   <div class="stat-item reveal"><span class="stat-num">₱<small>1,000</small></span><span class="stat-label">Per Bed / Night</span></div>
   <div class="stat-item reveal"><span class="stat-num">5<small>min</small></span><span class="stat-label">Walk to SLU & STI</span></div>
   <div class="stat-item reveal"><span class="stat-num">360°</span><span class="stat-label">Rooftop Views</span></div>
-</div>
-
-<!-- ROOFTOP VIDEO -->
-<div class="rooftop-section" id="rooftop">
-  <div class="rooftop-inner">
-    <div class="eyebrow reveal">Rooftop Experience</div>
-    <h2 class="section-title reveal">Baguio <em>From Above</em></h2>
-    <p class="section-body reveal">Step onto the rooftop and take in 360° views of Baguio City — mountains, pine trees, and the city skyline at golden hour.</p>
-    <div class="video-frame reveal">
-      <video autoplay muted loop playsinline preload="auto" controls>
-        <source src="rooftop.mp4" type="video/mp4">
-      </video>
-      <div class="video-tag"><span class="pulse"></span>Rooftop · Stanford Residences · Baguio</div>
-    </div>
-  </div>
 </div>
 
 <div class="hr"></div>
@@ -747,6 +726,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Slow hero video to cinematic speed
+const heroVid = document.querySelector('.hero video');
+if(heroVid) {
+  heroVid.addEventListener('loadedmetadata', () => {
+    heroVid.playbackRate = 0.5;
+  });
+  heroVid.playbackRate = 0.5;
+}
+
 </script>
 </body>
 </html>
