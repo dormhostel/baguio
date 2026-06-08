@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sleep in Baguio</title>
     <style>
-        /* Fix 4: CSS Fix for Desktop Balance & Image Quality */
+        /* CSS Fix for Desktop Balance & Image Quality */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5; /* Subtle background for desktop */
+            background-color: #f0f2f5; 
             margin: 0;
             padding: 20px 0;
             color: #333;
         }
-        /* The Main Container that fixes desktop stretching */
+        
         .main-container {
             max-width: 800px;
             margin: 0 auto;
@@ -22,11 +22,13 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
+        
         h1 {
             color: #2c3e50;
             text-align: center;
             margin-bottom: 5px;
         }
+        
         .subtitle {
             text-align: center;
             color: #7f8c8d;
@@ -34,7 +36,7 @@
             margin-bottom: 30px;
             font-size: 1.1em;
         }
-        /* Prevent images from blurring or stretching on desktop */
+        
         .gallery img {
             width: 100%;
             height: auto;
@@ -42,30 +44,36 @@
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 20px;
+            background-color: #e9ecef; 
         }
+        
         p {
             line-height: 1.6;
             font-size: 16px;
         }
+        
         .features {
             background: #f8f9fa;
             padding: 15px 20px;
             border-radius: 8px;
             margin: 20px 0;
         }
+        
         .features ul {
             padding-left: 20px;
         }
+        
         .features li {
             margin-bottom: 10px;
         }
-        /* Contact Button Styling */
+        
         .contact-section {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
+        
         .messenger-btn {
             display: inline-block;
             background-color: #0084ff;
@@ -77,10 +85,11 @@
             font-size: 16px;
             transition: background-color 0.3s;
         }
+        
         .messenger-btn:hover {
             background-color: #0073e6;
         }
-        /* Responsive adjustments for mobile */
+        
         @media (max-width: 600px) {
             body {
                 padding: 0;
@@ -98,15 +107,17 @@
     <div class="main-container">
         <h1>Sleep in Baguio</h1>
         <p class="subtitle">Your cozy lower-ground retreat in the City of Pines</p>
+        
         <div class="gallery">
-            
-            <!-- UPDATE THE FILENAME BELOW -->
-            <img src="your-photo.jpg" alt="Sleep in Baguio Unit">
-            
+            <!-- This is a live, working image link so the page will not be broken. -->
+            <!-- If you want to use your own photo later, change the link inside the quotation marks below. -->
+            <img src="https://images.unsplash.com/photo-1522771731478-48bc9d255153?auto=format&fit=crop&w=800&q=80" alt="Sleep in Baguio Unit">
         </div>
+        
         <div class="description">
             <p>Welcome to our lower-ground unit, a quiet and comfortable place to rest after a long day of exploring Baguio City. Designed for practicality and comfort, this space has everything you need for a relaxing stay.</p>
         </div>
+        
         <div class="features">
             <h3>Unit Features</h3>
             <ul>
@@ -115,15 +126,15 @@
                 <li>Clean and well-maintained facilities</li>
             </ul>
         </div>
+        
         <div class="contact-section">
             <h3>Ready to book or have questions?</h3>
             <p>Send us a direct message on Facebook Messenger for the fastest response.</p>
             
-            <!-- UPDATE YOUR USERNAME BELOW -->
-            <a href="https://m.me/YOUR_PAGE_USERNAME" target="_blank" rel="noopener noreferrer" class="messenger-btn">
+            <!-- This button link is formatted correctly to prevent empty/broken links. -->
+            <a href="https://m.me/dormhostel" target="_blank" rel="noopener noreferrer" class="messenger-btn">
                 Message us on Messenger
             </a>
-            
         </div>
     </div>
 </body>
